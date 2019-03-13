@@ -30,19 +30,18 @@ def lookup_pwned_api(pwd):
     return sha1pwd, count
 
 
-def main(args):
-    ec = 0
-    for pwd in args or sys.stdin:
-        pwd = pwd.strip()
+def main():
+    while True:
+        pwd = input('Enter your clear password (empty to exit) : ')
+        if (not pwd):
+            break
         sha1pwd, count = lookup_pwned_api(pwd)
         if count:
             print(pwd, "was found")
             print("Hash {0}, {1} occurrences".format(sha1pwd, count))
-            ec = 1
         else:
             print(pwd, "was not found")
-    return ec
-
+    return 0
 
 if __name__ == '__main__':
-    sys.exit(main(sys.argv[1:]))
+    sys.exit(main())

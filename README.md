@@ -3,16 +3,6 @@ Pwned Password API lookup
 
 Usage:
 
-* `python pwned.py` – reads passwords from standard input;
-* `python pwned.py <[file-with-passwords]` – reads passwords from
-  a file;
-* `another-command | python pwned.py <[file-with-passwords]` – reads
-  passwords written to standard output by another command;
-* `python pwned.py [password]` – checks passwords given as command line
-  arguments (beware the password may be saved in shell history and that
-  other users on the system ma be able to observe the command line).
+`python pwned.py` – asks user for passwords, because you wouldn't want your password to end up in your .bash_history .
 
-Thanks to those who fixed my dodgy code :)
-
-Have fun! Oh, and if you find one of your own passwords, change it asap!
-
+This is a fork of [Mike Pound's pwned-search](https://github.com/mikepound/pwned-search).
